@@ -10,11 +10,11 @@ const app = express();
 
 
 app.use(
-  cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
-    credentials: true,
-  })
-);
+    cors({
+      origin: ["https://event-management-app-swart.vercel.app", "http://localhost:5173"],
+      credentials: true,
+    })
+  );
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
@@ -29,7 +29,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// ✅ API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 
