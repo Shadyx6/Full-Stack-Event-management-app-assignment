@@ -14,11 +14,19 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
-      setUser(JSON.parse(loggedInUser));
-    }
+    const loadUser = () => {
+      const storedUser = localStorage.getItem("user");
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
+      }
+    };
+
+    window.addEventListener("storage", loadUser); 
+    loadUser();
+
+    return () => window.removeEventListener("storage", loadUser);
   }, []);
+
 
   return (
     <Router>

@@ -12,8 +12,8 @@ function Navbar({ user, setUser }) {
   return (
     <nav className="bg-blue-500 p-4 text-white flex justify-between">
       <h1 className="text-xl font-bold ">Event Manager</h1>
-      <div>
-        <a href="/" className="mr-4">
+      <div className="flex">
+        <a href="/" className="mr-4 flex">
           Home
         </a>
         {user ? (
@@ -29,7 +29,10 @@ function Navbar({ user, setUser }) {
             </button>
           </>
         ) : (
-          <a href="/login">Login</a>
+        <div className="flex gap-5">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
         )}
       </div>
     </nav>
