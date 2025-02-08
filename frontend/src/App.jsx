@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import { useState, useEffect } from "react";
 
 import "./index.css";
-import Dashboard from "./Components/Dashboard";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
-import Home from "./Components/Home";
-import Navbar from "./Components/NavBar";
-import PrivateRoute from "./Components/PrivateRoute";
-import CreateEvent from "./Components/CreateEvent";
+import Dashboard from "./Components_temp/Dashboard";
+import Register from "./Components_temp/Register";
+import Login from "./Components_temp/Login";
+import Home from "./Components_temp/Home";
+import Navbar from "./Components_temp/NavBar";
+import PrivateRoute from "./Components_temp/PrivateRoute";
+import CreateEvent from "./Components_temp/CreateEvent";
 
 function App() {
   const [user, setUser] = useState(null);
