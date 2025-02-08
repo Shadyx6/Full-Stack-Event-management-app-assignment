@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "https://full-stack-event-management-app.onrender.com/api";
+const API_URL = "https://full-stack-event-management-app.onrender.com/api";
 
 export const registerUser = async (userData) => {
   const res = await fetch(`${API_URL}/auth/register`, {
