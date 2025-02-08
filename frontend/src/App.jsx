@@ -8,7 +8,7 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Navbar from "./Components/NavBar";
 import PrivateRoute from "./Components/PrivateRoute";
-import CreateEvent from "./components/CreateEvent";
+import CreateEvent from "./Components/CreateEvent";
 
 function App() {
   const [user, setUser] = useState(null);
