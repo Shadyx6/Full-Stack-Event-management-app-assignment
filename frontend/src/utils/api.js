@@ -19,12 +19,12 @@ export const loginUser = async (userData) => {
 };
 
 export const createEvent = async (eventData, token) => {
-  console.log(Object.fromEntries(eventData.entries())); 
+  console.log("📤 Sending Event Data to:", API_URL); // Debugging
 
-  const res = await fetch("http://localhost:5000/api/events", {
+  const res = await fetch(`${API_URL}/events`, {  
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
-    body: eventData, 
+    body: eventData,
   });
 
   const responseData = await res.json();
@@ -32,6 +32,7 @@ export const createEvent = async (eventData, token) => {
 
   return responseData;
 };
+
 
 export const getEvents = async () => {
   const res = await fetch(`${API_URL}/events`);
